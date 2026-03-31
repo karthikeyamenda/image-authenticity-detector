@@ -1,153 +1,60 @@
-# 🧠 Image Authenticity Detector
+# Image Authenticity Detector
 
-A deep learning-based web application that detects whether an image is:
+This project is a simple deep learning web application that classifies an image as real, AI-generated, or morphed. It is built using PyTorch for the model and Streamlit for the interface, so it can be tested easily in a browser.
 
-* ✅ **Real**
-* 🤖 **AI Generated**
-* 🔀 **Morphed / Manipulated**
+## Live App
 
----
-
-## 🌐 Live Demo
-
-👉 **Try the app here:**
+You can try the app here:
 https://image-appenticity-detector-ydslpepx3qsq9rqleggqu7.streamlit.app/
 
----
+## What it does
 
-## 🚀 Features
+* Takes an input image
+* Processes it using a trained CNN model
+* Predicts whether the image is real, AI-generated, or morphed
+* Displays the prediction along with a confidence score
 
-* 🧠 CNN-based image classification (PyTorch)
-* 🌐 Interactive web UI using Streamlit
-* 📊 Confidence score for predictions
-* ⚡ Fast inference using saved model
-* 🖼️ Supports JPG, PNG image formats
+## Project Structure
 
----
-
-## 🏗️ Project Structure
-
-```
 image-authenticity-detector/
-│
 ├── app/
-│   └── app.py              # Streamlit UI
-│
+│   └── app.py
 ├── src/
 │   ├── preprocessing/
 │   ├── training/
-│   ├── model_loader.py     # Load trained model
-│
+│   ├── model_loader.py
 ├── models/
-│   └── model.pth           # Trained model file
-│
-├── data/                   # (Not uploaded to GitHub)
-│
+│   └── model.pth
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-```
 
----
+## How to run locally
 
-## ⚙️ Installation (Run Locally)
+1. Clone the repository
 
-### 1️⃣ Clone the repository
-
-```
 git clone https://github.com/your-username/image-authenticity-detector.git
 cd image-authenticity-detector
-```
 
----
+2. Create a virtual environment
 
-### 2️⃣ Create virtual environment
-
-```
 python -m venv venv
 venv\Scripts\activate
-```
 
----
+3. Install dependencies
 
-### 3️⃣ Install dependencies
-
-```
 pip install -r requirements.txt
-```
 
----
+4. Run the app
 
-### 4️⃣ Run the app
-
-```
 streamlit run app/app.py
-```
 
----
+## Notes
 
-## 📸 How to Use
+* The model is trained on a relatively small dataset, so accuracy may vary
+* Results depend on image quality and type
+* This project is mainly built for learning and experimentation
 
-1. Open the web app
-2. Upload an image (`.jpg`, `.png`)
-3. Wait for prediction
-4. View result:
+## Author
 
-* **REAL** → Original image
-* **AI** → AI-generated image
-* **MORPH** → Manipulated/blended image
-
-👉 You’ll also see a **confidence score (%)**
-
----
-
-## 🧠 Model Details
-
-* Framework: **PyTorch**
-* Architecture: Custom CNN
-* Input size: **128 × 128**
-* Classes:
-
-  * Real (0)
-  * AI (1)
-  * Morph (2)
-
----
-
-## ⚠️ Limitations
-
-* Small dataset → may overfit
-* Accuracy depends on image quality
-* Not yet robust for all real-world cases
-
----
-
-## 🔥 Future Improvements
-
-* Transfer learning (ResNet / EfficientNet)
-* Grad-CAM visualization (fake region detection)
-* Larger dataset training
-* Mobile app integration
-* Cloud-based model hosting
-
----
-
-## 👨‍💻 Author
-
-**Karthikeya**
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-* ⭐ Star the repository
-* 🍴 Fork it
-* 🚀 Share it
-
----
-
-## 📜 License
-
-This project is for educational and research purposes.
+Karthikeya
