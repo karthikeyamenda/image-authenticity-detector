@@ -40,7 +40,7 @@ class CNN(nn.Module):
             nn.Flatten(),
             nn.Linear(64 * 30 * 30, 128),
             nn.ReLU(),
-            nn.Linear(128, 2)  # 2 classes: real, ai
+            nn.Linear(128, 3) 
         )
 
     def forward(self, x):
@@ -87,3 +87,6 @@ with torch.no_grad():
     accuracy = (predicted == y_test).sum().item() / len(y_test)
 
 print("Test Accuracy:", accuracy)
+
+torch.save(model.state_dict(), "models/model.pth")
+print("Model saved successfully!")

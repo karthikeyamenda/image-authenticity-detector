@@ -4,7 +4,7 @@ import numpy as np
 
 # Path to dataset
 DATA_DIR = "data"
-CATEGORIES = ["real", "ai"]
+CATEGORIES = ["real", "ai", "morph"]
 
 IMG_SIZE = 128
 
